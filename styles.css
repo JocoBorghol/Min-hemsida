@@ -36,8 +36,14 @@ h3{color:var(--blue-700);margin-top:18px;font-size:20px}
 
 /* Hero */
 .hero{display:grid;grid-template-columns:160px 1fr;gap:120px;align-items:center;padding:28px 0}
-.hero-media img{width:280px;height:280px;border-radius:50%;object-fit:cover;border:4px solid var(--blue-700)}
-.hero-quote{font-style:italic;font-size:22px;color:var(--blue-800);display:flex;flex-direction:column;gap:px}
+.hero-media img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;                /* Gör bilden rund */
+  object-fit: cover;                 /* Bilden beskärs snyggt */
+  border: 4px solid var(--blue-700); /* Ram runt */
+}
+.hero-quote{font-style:italic;font-size:22px;color:var(--blue-800);display:flex;flex-direction:column;gap: 8px}
 .hero-quote span{display:block}
 
 .hero-name {
@@ -137,6 +143,7 @@ h3{color:var(--blue-700);margin-top:18px;font-size:20px}
 .col-edu ul {
   margin: 0;
   padding-left: 22px;
+  
 }
 
 .col-edu li {
@@ -224,4 +231,74 @@ h3{color:var(--blue-700);margin-top:18px;font-size:20px}
   font-size: 18px;    
   font-style: italic;
   color: #333;         
+}
+
+
+@media (max-width: 860px) {
+  /* HERO-sektionen på mobil */
+  .hero {
+    grid-template-columns: 1fr;   /* Lägg bild och text under varandra */
+    text-align: center;           /* Centrera all text */
+    gap: 40px;                    /* Mindre mellanrum än 120px */
+    padding: 24px 0;              /* Lite mindre vertikal luft */
+  }
+
+  /* Porträttbilden i hero */
+  .hero-media img {
+    width: 200px;                 /* Gör bilden mindre */
+    height: 200px;
+    margin: 0 auto;               /* Centrerar bilden horisontellt */
+  }
+
+  /* Namnet */
+  .hero-name {
+    margin: 0;
+    font-size: 26px;              /* Något mindre text på mobil */
+  }
+
+  /* Citatet */
+  .hero-quote {
+    font-size: 18px;              /* Mindre text så det får plats */
+    padding: 0 10px;              /* Luft på sidorna så texten inte klibbar */
+  }
+}
+
+/* === Galleri – mobilanpassning === */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;  /* En bild per rad */
+    gap: 20px;                   /* Lite extra luft mellan bilderna */
+    padding: 0 10px;             /* Luft från kanterna */
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;                /* Låt höjden anpassas automatiskt */
+    object-fit: contain;         /* Visa hela bilden utan beskärning */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+}
+
+/* === Utbildning och Kurser – Mobilanpassning === */
+@media (max-width: 860px) {
+  .col-edu {
+    width: 100%;                /* Fyller bara mobilens bredd */
+    box-sizing: border-box;     /* Säkerställer att padding räknas in i bredden */
+    margin: 0 auto;             /* Centrerar rutan */
+  }
+
+  .col-edu ul {
+    padding-left: 20px;         /* Justerar listan snyggt inifrån */
+  }
+}
+@media (max-width: 860px) {
+  .header-inner {
+    justify-content: center; /* centrera innehållet horisontellt */
+  }
+
+  .brand {
+    text-align: center;
+    width: 100%; /* se till att texten fyller hela bredden */
+  }
 }
