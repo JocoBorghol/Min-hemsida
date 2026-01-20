@@ -1,3 +1,6 @@
+/* =========================
+   Färgvariabler
+   ========================= */
 :root {
   --blue-900:#0B132B;
   --blue-800:#1C2541;
@@ -8,55 +11,48 @@
   --bg:#f5f7fa;  
 }
 
-*{box-sizing:border-box}
-body {
-  font-family: 'Inter', Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  font-size: px;
-  line-height: 1,9;
-}
-
-
-.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+/* =========================
+   Header
+   ========================= */
 .site-header{
   background:linear-gradient(90deg,var(--blue-900),var(--blue-700));
   color:#fff;
-  position:static;top:0;z-index:20;
-}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.brand{margin:0;font-size:25px;letter-spacing:.5px}
-.section {
-  padding: 30px 0;
-  margin-bottom: 12px;
+  position:static;
+  top:0;
+  z-index:20;
 }
 
-h2{color:var(--blue-800);margin:0 0 6px 0;font-size:28px}
-h3{color:var(--blue-700);margin-top:18px;font-size:20px}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding:14px 0;
+}
 
-/* Hero */
-.hero{display:grid;grid-template-columns:160px 1fr;gap:120px;align-items:center;padding:28px 0}
+.brand{
+  margin:0;
+  font-size:25px;
+  letter-spacing:.5px;
+}
+
+/* =========================
+   Hero (endast design)
+   ========================= */
 .hero-media img {
   width: 280px;
   height: 280px;
-  border-radius: 50%;                /* Gör bilden rund */
-  object-fit: cover;                 /* Bilden beskärs snyggt */
-  border: 4px solid var(--blue-700); /* Ram runt */
-}
-.hero-quote{font-style:italic;font-size:22px;color:var(--blue-800);display:flex;flex-direction:column;gap: 8px}
-.hero-quote span{display:block}
-
-.hero-name {
-  font-size: 32px;
-  color: var(--blue-800);
-  margin: 0 0 12px 45px; 
-  font-weight: 700;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--blue-700);
 }
 
+/* =========================
+   Bilder i innehåll
+   ========================= */
 .family-img {
- max-width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 12px;             
+  border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   margin: 20px auto;
 }
@@ -64,13 +60,16 @@ h3{color:var(--blue-700);margin-top:18px;font-size:20px}
 .vision-img {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;            
+  border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   margin: 20px auto;
 }
 
+/* =========================
+   Accordion
+   ========================= */
 .accordion {
-  border: 2px solid #2b4c7e;           
+  border: 2px solid #2b4c7e;
   border-radius: 14px;
   margin-bottom: 18px;
   background: #fff;
@@ -90,34 +89,39 @@ h3{color:var(--blue-700);margin-top:18px;font-size:20px}
   font-weight: 600;
   padding: 14px 18px;
   list-style: none;
-  background: #f8fbff;  
-}
-
-.accordion-body {
-  padding: 0 28px 20px 28px; 
-  line-height: 1.6;
+  background: #f8fbff;
 }
 
 .accordion[open] > summary {
-  background: #eef5ff;  
+  background: #eef5ff;
+}
+
+.accordion-body {
+  padding: 0 28px 20px 28px;
+  line-height: 1.6;
 }
 
 .accordion-body img {
-  width: 100%;          
-  max-width:1050px;   
-  height: auto;         
-  display: block;       
-  margin: 16px auto;   
-  border-radius: 12px;  
+  width: 100%;
+  max-width:1050px;
+  height: auto;
+  display: block;
+  margin: 16px auto;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.columns {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 1fr 1fr;
+.summary-intro {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+  font-style: italic;
+  color: #333;
 }
 
+/* =========================
+   Kompetens- och utbildningskort
+   ========================= */
 .col {
   border-radius: 16px;
   padding: 20px;
@@ -128,66 +132,69 @@ h3{color:var(--blue-700);margin-top:18px;font-size:20px}
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Gör Utbildning och Kurser lika bred som kompetensrutorna */
-.col-edu {
-  border-radius: 16px;
-  padding: 20px;
-  border: none;
-  background: linear-gradient(180deg, var(--blue-700), var(--blue-700));
-  color: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 200%;              /* fyller ut hela kolumnen */
-}
-
-.col-edu ul {
-  margin: 0;
-  padding-left: 22px;
-  
-}
-
-.col-edu li {
-  margin: 8px 0;
-}
-
-
-.col-edu:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
-}
-
-.col-edu h3 {
-  color: #fff;
-}
-
 .col ul {
   margin: 0;
   padding-left: 22px;
-}
-
-.col h3,
-.col-edu h3 {
-  color: #ffffff;
-  font-weight: 700;
 }
 
 .col li {
   margin: 8px 0;
 }
 
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.gallery img{width:100%;height:450px;object-fit:cover;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.col h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Utbildningar */
+.col-edu {
+  border-radius: 16px;
+  padding: 20px;
+  border: none;
+  background: linear-gradient(180deg, var(--blue-900), var(--blue-700));
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.col-edu ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.col-edu li {
+  margin: 8px 0;
+  color: #ffffff;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+
+.col-edu h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.col-edu:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   Footer
+   ========================= */
 .site-footer {
   margin-top:40px;
   background:var(--blue-900);
   color:#cfe7ff;
-  text-align:center;         
+  text-align:center;
 }
 
 .footer-inner {
-  display:flex;                
-  flex-direction:column;          
-  align-items:center;             
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   gap:18px;
   padding:22px 0;
 }
@@ -201,7 +208,7 @@ h3{color:var(--blue-700);margin-top:18px;font-size:20px}
   display:flex;
   flex-wrap:wrap;
   gap:18px;
-  justify-content:center;         
+  justify-content:center;
 }
 
 .logos img {
@@ -216,89 +223,12 @@ h3{color:var(--blue-700);margin-top:18px;font-size:20px}
   margin:1;
 }
 
-
-@media (max-width:860px){
-  .hero{grid-template-columns:1fr;text-align:center}
-  .hero-media img{margin:0 auto}
-  .with-image{grid-template-columns:1fr}
-  .columns{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr 1fr}
-}
-
-.summary-intro {
-  display: block;
-  margin-top: 8px;
-  font-size: 18px;    
+.hero-quote {
+  font-family: 'Playfair Display', serif;
   font-style: italic;
-  color: #333;         
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 
-@media (max-width: 860px) {
-  /* HERO-sektionen på mobil */
-  .hero {
-    grid-template-columns: 1fr;   /* Lägg bild och text under varandra */
-    text-align: center;           /* Centrera all text */
-    gap: 40px;                    /* Mindre mellanrum än 120px */
-    padding: 24px 0;              /* Lite mindre vertikal luft */
-  }
-
-  /* Porträttbilden i hero */
-  .hero-media img {
-    width: 200px;                 /* Gör bilden mindre */
-    height: 200px;
-    margin: 0 auto;               /* Centrerar bilden horisontellt */
-  }
-
-  /* Namnet */
-  .hero-name {
-    margin: 0;
-    font-size: 26px;              /* Något mindre text på mobil */
-  }
-
-  /* Citatet */
-  .hero-quote {
-    font-size: 18px;              /* Mindre text så det får plats */
-    padding: 0 10px;              /* Luft på sidorna så texten inte klibbar */
-  }
-}
-
-/* === Galleri – mobilanpassning === */
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;  /* En bild per rad */
-    gap: 20px;                   /* Lite extra luft mellan bilderna */
-    padding: 0 10px;             /* Luft från kanterna */
-  }
-
-  .gallery img {
-    width: 100%;
-    height: auto;                /* Låt höjden anpassas automatiskt */
-    object-fit: contain;         /* Visa hela bilden utan beskärning */
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-}
-
-/* === Utbildning och Kurser – Mobilanpassning === */
-@media (max-width: 860px) {
-  .col-edu {
-    width: 100%;                /* Fyller bara mobilens bredd */
-    box-sizing: border-box;     /* Säkerställer att padding räknas in i bredden */
-    margin: 0 auto;             /* Centrerar rutan */
-  }
-
-  .col-edu ul {
-    padding-left: 20px;         /* Justerar listan snyggt inifrån */
-  }
-}
-@media (max-width: 860px) {
-  .header-inner {
-    justify-content: center; /* centrera innehållet horisontellt */
-  }
-
-  .brand {
-    text-align: center;
-    width: 100%; /* se till att texten fyller hela bredden */
-  }
-}

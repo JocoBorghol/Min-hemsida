@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utbildningar och Kurser - Joco Borghol</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-[Inter] text-slate-800 leading-relaxed text-[18px] subpage">
+
+<header class="site-header">
+  <div class="container header-inner max-w-6xl mx-auto px-4 text-center">
+    <h1 class="brand">
+      <a href="index.html">← Tillbaka</a>
+    </h1>
+  </div>
+</header>
+
+<main class="container max-w-6xl mx-auto px-4 mb-20 text-center">
+  <h1 class="text-3xl md:text-4xl font-semibold mb-8 mt-8 text-center">
+    Utbildningar och Kurser
+  </h1>
+
+
+  <p class="mb-10 max-w-3xl mx-auto text-slate-600 text-center">
+    Här har jag samlat mina utbildningar och kurser.
+  </p>
+
+
+
+  <!-- Renderas från JSON -->
+  <div id="education-list" class="space-y-10"></div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner max-w-6xl mx-auto px-4">
+    <div class="logos">
+      <img src="images/icalogo.png" alt="ICA logo" />
+      <img src="images/Limhamn_Sjöstad_logotyp.png" alt="Limhams sjostad egna framtagna logo" />
+      <img src="images/oca gruppen.png" alt="ICA Gruppen logo" />
+      <img src="images/chas.jpg" alt="Chas Academy logo" />
+      <a href="https://github.com/JocoBorghol" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <img src="images/github.png" alt="GitHub logo" />
+      </a>
+      <img src="images/c.png" alt="C#/.NET logo" />
+    </div>
+    <div class="contact">
+      <p>© 2025 Joco Borghol</p>
+      Tel: <a href="tel:+46704607502">070 460 75 02</a><br>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/joco-borghol-777b59386" target="_blank" rel="noopener noreferrer">
+        Joco Borghol
+      </a><br>
+      GitHub:
+      <a href="https://github.com/JocoBorghol" target="_blank" rel="noopener noreferrer">
+        github.com/JocoBorghol
+      </a><br>
+      Mail: <a href="mailto:joco.borghol@gmail.com">joco.borghol@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+<script>
+fetch("data/educations.json")
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById("education-list");
+
+    data.forEach(item => {
+      container.innerHTML += `
+  <section class="col">
+    <h2 class="text-2xl font-semibold mb-1">${item.title}</h2>
+    <p class="text-slate-300 mb-3">
+      ${item.provider} · ${item.year}
+    </p>
+    <p>${item.description}</p>
+  </section>
+`;
+
+    });
+  });
+</script>
+<script>
+fetch("data/experience.json")
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById("experience-list");
+
+    data.forEach(job => {
+      const section = document.createElement("section");
+      section.className = "p-6 rounded-xl bg-white shadow";
+
+      section.innerHTML = `
+        <h2 class="text-xl font-semibold mb-1">
+          ${job.company}
+        </h2>
+        <p class="text-slate-600 mb-2">
+          ${job.role} · ${job.period}
+        </p>
+        <p class="italic mb-3">"${job.summary}"</p>
+        <ul class="list-disc pl-6 space-y-1">
+          ${job.description.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      `;
+
+      container.appendChild(section);
+    });
+  });
+</script>
+</body>
+</html>

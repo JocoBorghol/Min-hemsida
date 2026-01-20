@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Nuvarande kompetenser",
+    "items": [
+      "Strukturerad och organiserad",
+      "Problemlösning",
+      "Stark kundservicekänsla",
+      "Budget- och resultatansvar",
+      "Lönsamhetsoptimering",
+      "Schemaläggning och personalansvar",
+      "Fokus på lönsamhet och kvalitet",
+      "Rekrytering, medarbetarutveckling och coaching",
+      "Förändringsledning",
+      "Nyetablering och förnyelser",
+      "Egenkontroll och livsmedelssäkerhet",
+      "Svinnkontroll och effektivisering",
+      "Nyckeltalsanalys och KPI-styrning",
+      "Microsoft Office och Google Workspace",
+      "ICA:s interna system"
+    ]
+  },
+  {
+    "category": "Utvecklas inom",
+    "items": [
+      "C# grunder och objektorientering",
+      "Felhantering, testning och debugging",
+      "Programstruktur och kodarkitektur",
+      "UML-diagram och designmönster",
+      "Versionshantering i projekt",
+      ".NET och ASP.NET Core",
+      "Web API, REST och JSON",
+      "HTML, CSS och JavaScript",
+      "Responsiv design och moderna frontendramverk",
+      "SQL och Entity Framework",
+      "Systemintegrationer och API-hantering",
+      "Testdriven utveckling",
+      "Deployment och DevOps introduktion",
+      "Git och GitHub",
+      "Visual Studio och VS Code"
+    ]
+  }
+]

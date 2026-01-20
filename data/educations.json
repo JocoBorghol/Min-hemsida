@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Fullstackutvecklare .NET",
+    "provider": "Chas Academy",
+    "year": "2025–2027",
+    "description": "En bred utbildning inom systemutveckling med fokus på C#, .NET, databaser, webbutveckling och arkitektur. Kunskaperna används praktiskt genom projekt, grupparbeten och egna applikationer."
+  },
+  {
+    "title": "Examensarbete",
+    "provider": "Chas Academy",
+    "year": "2027",
+    "description": "Avslutande examensarbete med fokus på att tillämpa systemutveckling i ett verkligt projekt."
+  },
+  {
+    "title": "LIA – Lärande i arbete",
+    "provider": "Chas Academy",
+    "year": "2026–2027",
+    "description": "Praktikperiod där teori omsätts i praktiskt arbete i en professionell utvecklingsmiljö."
+  },
+  {
+    "title": "Avancerad fullstack AI-applikation",
+    "provider": "Chas Academy",
+    "year": "2026",
+    "description": "Fördjupning i fullstackutveckling med fokus på AI-baserade lösningar."
+  },
+  {
+    "title": "Cloud och DevOps",
+    "provider": "Chas Academy",
+    "year": "Kommande",
+    "description": "Introduktion till molntjänster, CI/CD och DevOps-arbetssätt."
+  },
+  {
+    "title": "Backend API",
+    "provider": "Chas Academy",
+    "year": "Kommande",
+    "description": "Utveckling av backend-API:er med fokus på struktur, säkerhet och integration."
+  },
+  {
+    "title": "Frontend och tillgänglighet",
+    "provider": "Chas Academy",
+    "year": "Pågående",
+    "description": "Fokus på användargränssnitt, WCAG och tillgänglig webbutveckling."
+  },
+  {
+    "title": "Professional Scrum Product Owner (PSPO I)",
+    "provider": "ProAgile",
+    "year": "Kommande",
+    "description": "Förståelse för produktägarrollen, prioritering och värdeskapande i agila team."
+  },
+  {
+    "title": "Databas och datamodellering",
+    "provider": "Chas Academy",
+    "year": "2025",
+    "description": "Fördjupning i relationsdatabaser, normalisering, ER-diagram och SQL."
+  },
+  {
+    "title": "Utveckling med grundläggande C#",
+    "provider": "Chas Academy",
+    "year": "2025",
+    "description": "Grunder i C# och objektorienterad programmering."
+  },
+  {
+    "title": "FLU – Företagsledarutbildning",
+    "provider": "ICA",
+    "year": "2021",
+    "description": "Ledarskap, ekonomi och affärsutveckling i butiksmiljö."
+  },
+  {
+    "title": "ELD – Effektivt lönsamhetsarbete med datorn som verktyg",
+    "provider": "ICA",
+    "year": "2021",
+    "description": "Analys, uppföljning och effektivisering av verksamhet."
+  },
+  {
+    "title": "BLU – Butiksledarutbildning",
+    "provider": "ICA",
+    "year": "2010",
+    "description": "Grundläggande ledarskap och drift av butik."
+  },
+  {
+    "title": "AOB – Automatisk Order i Butik",
+    "provider": "ICA",
+    "year": "2017",
+    "description": "Effektivisering av varuflöden och orderprocesser."
+  },
+  {
+    "title": "HACCP",
+    "provider": "ICA",
+    "year": "2008, 2019, 2022",
+    "description": "Livsmedelssäkerhet och egenkontroll."
+  },
+  {
+    "title": "Vizuera – Försäljning och lönsamhet",
+    "provider": "ICA",
+    "year": "2013",
+    "description": "Försäljningsanalys och lönsamhetsstyrning."
+  },
+  {
+    "title": "Löpande ICA-webbutbildningar",
+    "provider": "ICA",
+    "year": "Återkommande",
+    "description": "Kontinuerlig kompetensutveckling inom ICA:s system och arbetssätt."
+  }
+]

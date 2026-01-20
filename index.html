@@ -1,9 +1,12 @@
+<!DOCTYPE html>
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joco Borghol</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1738L7HZX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,69 +15,98 @@
     gtag('config', 'G-E1738L7HZX');
   </script>
 </head>
-<body>
+
+<body class="font-[Inter] text-slate-800 leading-relaxed text-[18px]">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+
 <header class="site-header">
-  <div class="container header-inner">
+  <div class="container header-inner max-w-6xl mx-auto px-6 justify-center">
     <h1 class="brand">Varmt välkommen!</h1>
   </div>
 </header>
-<section class="hero container">
+
+
+<section class="hero container max-w-6xl mx-auto px-6 flex flex-col items-center gap-6">
   <div class="hero-media">
-    <img src="images/port.jpg" alt="Joco Borghol" />
+    <img
+      src="images/port.jpg"
+      alt="Joco Borghol"
+      class="rounded-xl w-full max-w-sm mx-auto"
+    />
   </div>
+
   <div class="hero-text">
-    <h2 class="hero-name">Joco Borghol</h2>
-    <blockquote class="hero-quote">
+    <h2 class="hero-name text-3xl md:text-4xl font-bold mb-4">
+      Joco Borghol
+    </h2>
+
+    <blockquote class="hero-quote space-y-2 italic text-slate-600">
       <span>”Jag ger alltid mitt yttersta och förväntar mig detsamma av teamet.</span>
       <span>Att nöja sig med bra finns inte på kartan, vi ska sikta högre.</span>
       <span>Med en agil organisation, rätt tempo och människor som delar samma driv kan vi ligga i framkant och fortsätta sätta ribban"</span>
     </blockquote>
   </div>
 </section>
-  <main>
-    <section class="container section">
-      <h2>Om mig</h2>
-      <p>Jag heter Joco Borghol. Det korrekta uttalet är Jåtså, men jag har fått höra många olika varianter genom åren,
-      lika spännande varje gång någon ska uttala det för första gången. Jag har under hela mitt yrkesliv utvecklats
-      inom ICA. Från mina första dagar i kassan till roller som avdelningsansvarig, färskvaruchef, försäljningschef och
-      butikschef har jag samlat på mig bred erfarenhet av drift, ledarskap och kundupplevelse. Det som utmärker mig är min
-      förmåga att skapa struktur, bygga starka team, kombinera inspiration med lönsamhet och framförallt problemlösning. Jag trivs bäst när jag får
-      vara mitt i vardagens tempo, fatta beslut och utveckla både verksamhet och människor.</p>
-    </section>
-    <section class="container section">
-      <h2>Bakom kulisserna</h2>
-      <div>
-        <p>Jag har lätt för att hålla många bollar i luften och tycker om att driva på när mycket händer samtidigt.
-        Jag vet att det kräver fokus både på mig själv och på teamet. Men i stunderna med familjen vill jag inget hellre än
-        att vara där. Balansen mellan karriär och familj är något jag ständigt arbetar med. Jag lever tillsammans med
-        Johanna och våra fyra barn Nikola, Aleks, Jolie och Leon. Vår vardag är fylld av läxor, träningar och aktiviteter,
-        men vi vårdar våra traditioner. Fredagsmys och lördagsgodis framför en film är heliga stunder. För mig är familjen
-        en plats att hämta energi och återfå perspektiv. Att vara närvarande hemma är lika viktigt som att leverera på jobbet.
-        Efter livserfarenheter som satt spår vet jag att tiden med familjen är det mest värdefulla.</p>
-        <img src="images/barnen1.jpg" alt="Familjen" class="family-img" />
-      </div>
-    </section>
-    <section class="container section">
-      <h2>Vision</h2>
-      <p>Min vision är att skapa struktur, bygga starka team och ge människor en bra upplevelse i vardagen. Jag vill driva
-      förändring, förenkla arbetet och skapa en kultur där både medarbetare och kunder känner sig uppskattade. Det handlar
-      inte bara om siffror och lönsamhet utan om helheten. När struktur möter engagemang och teamet växer tillsammans med
-      kundernas förtroende, då kommer resultaten.</p>
-      <img src="images/intelligenta-butik.jpg" alt="digitalbutik" class="vision-img" />
-    </section>
-    <section class="container section">
-      <h2>Framtid</h2>
-      <p>Jag har under många år gett allt i butiksvärlden, ofta med många bollar i luften och fullt ansvar för både team,
-      drift och resultat. Nu vill jag använda samma energi framåt mot nya mål. Mitt nästa steg handlar om att ta tillvara
-      mina erfarenheter och kombinera dem med nya kunskaper genom nya utmaningar. Jag vill bidra till utveckling och
-      lösningar som gör vardagen enklare. Det är samma tanke som i butiken, men med andra verktyg. Jag vet också att balans
-      mellan arbete och familj inte är en kompromiss utan en nödvändighet. Efter många år med helger, röda dagar och kvällar
-      vill jag prioritera annorlunda. Med samma driv som alltid vill jag nu vara med där framtiden formas, där handel möter
-      digitalisering, och bidra med både erfarenhet och nya idéer. För mig handlar det inte om att bromsa, utan om att lägga
-      energin där den gör störst skillnad.</p>
-    </section>
-    <section class="container section">
-      <h2>Karriär</h2>
+
+<main>
+
+<section class="container max-w-6xl mx-auto px-6 mb-16">
+
+  <h2 class="text-2xl md:text-3xl font-semibold mb-2 mt-8">
+    Om mig
+  </h2>
+  <p>Jag heter Joco Borghol. Det korrekta uttalet är Jåtså, men jag har fått höra många olika varianter genom åren,
+  lika spännande varje gång någon ska uttala det för första gången. Jag har under hela mitt yrkesliv utvecklats
+  inom ICA. Från mina första dagar i kassan till roller som avdelningsansvarig, färskvaruchef, försäljningschef och
+  butikschef har jag samlat på mig bred erfarenhet av drift, ledarskap och kundupplevelse. Det som utmärker mig är min
+  förmåga att skapa struktur, bygga starka team, kombinera inspiration med lönsamhet och framförallt problemlösning. Jag trivs bäst när jag får
+  vara mitt i vardagens tempo, fatta beslut och utveckla både verksamhet och människor.</p>
+</section>
+
+<section class="container max-w-6xl mx-auto px-6 mb-16">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-2 mt-8">
+    Bakom kulisserna
+  </h2>
+  <div>
+    <p>Jag har lätt för att hålla många bollar i luften och tycker om att driva på när mycket händer samtidigt.
+    Jag vet att det kräver fokus både på mig själv och på teamet. Men i stunderna med familjen vill jag inget hellre än
+    att vara där. Balansen mellan karriär och familj är något jag ständigt arbetar med. Jag lever tillsammans med
+    Johanna och våra fyra barn Nikola, Aleks, Jolie och Leon. Vår vardag är fylld av läxor, träningar och aktiviteter,
+    men vi vårdar våra traditioner. Fredagsmys och lördagsgodis framför en film är heliga stunder. För mig är familjen
+    en plats att hämta energi och återfå perspektiv. Att vara närvarande hemma är lika viktigt som att leverera på jobbet.
+    Efter livserfarenheter som satt spår vet jag att tiden med familjen är det mest värdefulla.</p>
+    <img src="images/barnen1.jpg" alt="Familjen" class="family-img" />
+  </div>
+</section>
+
+<section class="container max-w-6xl mx-auto px-6 mb-16">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-2 mt-8">
+    Vision
+  </h2>
+  <p>Min vision är att skapa struktur, bygga starka team och ge människor en bra upplevelse i vardagen. Jag vill driva
+  förändring, förenkla arbetet och skapa en kultur där både medarbetare och kunder känner sig uppskattade. Det handlar
+  inte bara om siffror och lönsamhet utan om helheten. När struktur möter engagemang och teamet växer tillsammans med
+  kundernas förtroende, då kommer resultaten.</p>
+</section>
+
+<section class="container max-w-6xl mx-auto px-6 mb-16">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-2 mt-8">
+    Framtid
+  </h2>
+  <p>Jag har under många år gett allt i butiksvärlden, ofta med många bollar i luften och fullt ansvar för både team,
+  drift och resultat. Nu vill jag använda samma energi framåt mot nya mål. Mitt nästa steg handlar om att ta tillvara
+  mina erfarenheter och kombinera dem med nya kunskaper genom nya utmaningar. Jag vill bidra till utveckling och
+  lösningar som gör vardagen enklare. Det är samma tanke som i butiken, men med andra verktyg. Jag vet också att balans
+  mellan arbete och familj inte är en kompromiss utan en nödvändighet. Efter många år med helger, röda dagar och kvällar
+  vill jag prioritera annorlunda. Med samma driv som alltid vill jag nu vara med där framtiden formas, där handel möter
+  digitalisering, och bidra med både erfarenhet och nya idéer. För mig handlar det inte om att bromsa, utan om att lägga
+  energin där den gör störst skillnad.</p>
+</section>
+  <section class="container max-w-6xl mx-auto px-6 mb-16">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-2 mt-8">
+    Karriär
+  </h2>
    <details class="accordion">
   <summary>
     ICA Supermarket Limhamns Sjöstad (2022-2025) · Butikschef Färsk
@@ -138,34 +170,33 @@
     </div>
   </details>
 </section>
-    <section class="container section">
-      <h2>Kompetenser</h2>
-      <div class="columns">
+    <section class="container max-w-6xl mx-auto px-6 mb-16">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-2 mt-8">
+        <a href="kompetenser.html">Kompetenser</a>
+      </h2>
+      <div class="columns grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="col col-solid">
-          <h3>Nuvarande</h3>
+          <h3 class="text-lg font-semibold mb-3">
           <ul>
-            <li>Lönsamhetsoptimering</li>
-            <li>Problemlösning och analytisk förmåga</li>
-            <li>Stark kundservicekänsla</li>
             <li>Strukturerad och organiserad</li>
+            <li>Problemlösning</li>
+            <li>Stark kundservicekänsla</li>
+            <li>Budget- och resultatansvar</li>
+            <li>Lönsamhetsoptimering</li>
             <li>Schemaläggning och personalansvar</li>
             <li>Fokus på lönsamhet och kvalitet</li>
-            <li>Rekrytering och introduktion</li>
             <li>Rekrytering, Medarbetarutveckling och coachning</li>
             <li>Förändringsledning</li>
-            <li>Sortiment och planogram</li>
             <li>Nyetablering och förnyelser</li>
             <li>Egenkontroll och livsmedelssäkerhet</li>
             <li>Svinnkontroll och effektivisering</li>
-            <li>Budget- och resultatansvar</li>
             <li>Nyckeltalsanalys och KPI-styrning</li>
             <li>Microsoft Office och Google Workspace</li>
             <li>ICA:s interna system</li>
-          
           </ul>
         </div>
         <div class="col col-outline">
-          <h3>Utbildar mig inom</h3>
+          <h3 class="text-lg font-semibold mb-3">
           <ul>
             <li>✅ C# grunder och objektorientering</li>
             <li>✅ Felhantering, testning och debugging</li>
@@ -186,8 +217,10 @@
         </div>
       </div>
     </section>
-   <section class="container section">
-  <h2>Utbildningar och Kurser</h2>
+   <section class="container max-w-6xl mx-auto px-4 mb-16">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-2 mt-8">
+    <a href="utbildningar.html">Utbildningar och Kurser</a>
+  </h2>
    <div class="columns">
     <div class="col-edu">
       <ul>
@@ -211,8 +244,10 @@
     </div>
   </div>
 </section>
-<section class="container section">
-  <h2>Min resa framåt</h2>
+<section class="container max-w-6xl mx-auto px-6 mb-16"
+  <h2 class="text-2xl md:text-3xl font-semibold mb-2 mt-8">
+    Min resa framåt
+  </h2>
   <div class="forward-card">
    Att lämna branschen efter så många år var ett tufft men ett nödvändigt beslut om jag vill åstadkomma det jag önskar. 
    Stora förändringar är aldrig enkla, men i det här fallet kändes det som rätt tid. Nu eller aldrig.
@@ -223,57 +258,50 @@
   Kodandet är både kul och kraftfullt, och på kort tid har jag fått en stabil förståelse för tekniken och hur den kan användas i praktiken.
   Jag visste att jag skulle kunna bidra mycket till helheten kring att skapa projekt och driva dem framåt, men jag har också levererat starka resultat på kort tid. Min känsla för detaljer, noggrannhet och viljan att alltid ge järnet syns tydligt i både resultaten och i koden jag skriver.
   På lång sikt ser jag min framtid i gränslandet mellan affär och utveckling, där jag kan översätta behov till genomtänkta lösningar, skapa struktur och säkerställa att arbetet drivs i rätt riktning. Jag värdesätter förmågan att stanna upp, lyssna av omvärlden, ta in kunders önskemål och krav, och justera riktningen vid behov för att alltid leverera det som skapar verkligt värde.
-<strong>Riktningen är satt och målet är i sikte. Nu kör vi.</strong> 
-  </div>
-</section>
+<p class="closing-line">
+  <strong>Riktningen är satt och målet är i sikte. Nu kör vi!!</strong>
+</p>
 
-
-  
-<section class="container section">
-  <h2>Galleri</h2>
-  <div class="gallery">
-    <img src="images/joco22.png" alt="filmbild" />
-    <img src="images/svinn.jpg" alt="Joco med kampanjskylt" />
-    <img src="images/IMG-20231120-WA0001.JPG" alt="bild" />
-    <img src="images/tomlokal.JPG" alt="lokal" />
-    <img src="images/kvalite.jpg" alt="guldstjärna" />
-    <img src="images/jag&johanna.jpg" alt="love 3" />
   </div>
 </section>
 </main>
- <footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="logos">
-      <img src="images/icalogo.png" alt="ICA" />
-      <img src="images/Limhamn_Sjöstad_logotyp.png" alt="Limham" />
-      <img src="images/oca gruppen.png" alt="ICA Gruppen" />
-      <img src="images/chas.jpg" alt="Chas Academy" />
-      <a href="https://github.com/JocoBorghol"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="GitHub">
-        <img src="images/github.png" alt="GitHub" />
-      </a>
-      <img src="images/c.png" alt="C#/.NET" />
-    </div>
-     <div class="contact">
-  <p>© 2025 Joco Borghol</p>
-  Tel: <a href="tel:+46704607502">070 460 75 02</a><br>
-  LinkedIn:
-  <a href="https://www.linkedin.com/in/joco-borghol-777b59386"
-     target="_blank"
-     rel="noopener noreferrer">
-    Joco Borghol
-  </a><br>
-  GitHub:
-  <a href="https://github.com/JocoBorghol"
-     target="_blank"
-     rel="noopener noreferrer">
-    github.com/JocoBorghol
-  </a><br>
-  Mail: <a href="mailto:joco.borghol@gmail.com">joco.borghol@gmail.com</a>
+
+<div class="flex justify-center mt-10">
+  <a href="assets/cv/CV-Joco-Borghol.pdf"
+     download
+     class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-[#0B132B] to-[#3A506B] text-white font-semibold shadow-lg hover:opacity-90 transition">
+    Ladda ner mitt CV
+  </a>
 </div>
+
+
+<footer class="site-footer">
+  <div class="container footer-inner max-w-6xl mx-auto px-6">
+    <div class="logos">
+      <img src="images/icalogo.png" alt="ICA logo" />
+      <img src="images/Limhamn_Sjöstad_logotyp.png" alt="Limhams sjostad egna framtagna logo" />
+      <img src="images/oca gruppen.png" alt="ICA Gruppen logo" />
+      <img src="images/chas.jpg" alt="Chas Academy logo" />
+      <a href="https://github.com/JocoBorghol" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <img src="images/github.png" alt="GitHub logo" />
+      </a>
+      <img src="images/c.png" alt="C#/.NET logo" />
+    </div>
+    <div class="contact">
+      <p>© 2025 Joco Borghol</p>
+      Tel: <a href="tel:+46704607502">070 460 75 02</a><br>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/joco-borghol-777b59386" target="_blank" rel="noopener noreferrer">
+        Joco Borghol
+      </a><br>
+      GitHub:
+      <a href="https://github.com/JocoBorghol" target="_blank" rel="noopener noreferrer">
+        github.com/JocoBorghol
+      </a><br>
+      Mail: <a href="mailto:joco.borghol@gmail.com">joco.borghol@gmail.com</a>
+    </div>
   </div>
 </footer>
+
 </body>
 </html>
