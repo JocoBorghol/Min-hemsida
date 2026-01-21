@@ -52,12 +52,24 @@ body {
 }
 
 .hero-quote {
+  max-width: 680px;        /* gör den kompakt */
+  margin: 0 auto;          /* centrerar blocket */
+  text-align: center;      /* centrerar texten */
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 19px;
-  line-height: 1.6;
+  font-size: 18px;         /* något mindre */
+  line-height: 1.55;       /* tätare rader */
   color: var(--muted);
 }
+
+.hero-name {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.85;
+  font-size: 1.75rem;
+}
+
 
 /* =========================
    Bilder i innehåll
@@ -385,8 +397,6 @@ a[download]:active {
   align-items: center;
   gap: 24px;
 }
-
-
 
 
 

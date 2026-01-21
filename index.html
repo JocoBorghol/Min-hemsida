@@ -33,11 +33,10 @@
     <h2 class="hero-name text-3xl md:text-4xl font-bold mb-4">
       Joco Borghol
     </h2>
-    <blockquote class="hero-quote space-y-2 italic text-slate-600">
-      <span>”Jag ger alltid mitt yttersta och förväntar mig detsamma av teamet.</span>
-      <span>Att nöja sig med bra finns inte på kartan, vi ska sikta högre.</span>
-      <span>Med en agil organisation, rätt tempo och människor som delar samma driv kan vi ligga i framkant och fortsätta sätta ribban"</span>
-    </blockquote>
+    <blockquote class="hero-quote">
+  ”Jag ger alltid mitt yttersta och förväntar mig detsamma av teamet. Att nöja sig med bra finns inte på kartan, vi ska sikta högre. Med en agil organisation, rätt tempo och människor som delar samma driv kan vi ligga i framkant och fortsätta sätta ribban.”
+</blockquote>
+
   </div>
 </section>
 <main>
@@ -303,7 +302,6 @@
 </footer>
 <script>
   const cvButton = document.getElementById("cv-download");
-
   // Texter
   const loadingText = "CV laddas ner..";
   const thankYouText = "Tack 😊";
@@ -321,7 +319,6 @@
     isRunning = true;
 
     cvButton.style.pointerEvents = "none";
-
     // Steg 1: laddar
     cvButton.textContent = loadingText;
 
@@ -338,15 +335,9 @@
           cvButton.style.pointerEvents = "auto";
           isRunning = false;
         }, finalDuration);
-
       }, thankYouDuration);
-
     }, loadingDuration);
   });
 </script>
-
-
-
-
 </body>
 </html>
