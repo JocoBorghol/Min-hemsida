@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/theme.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1738L7HZX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,9 +16,15 @@
     gtag('config', 'G-E1738L7HZX');
   </script>
 </head>
-<body class="font-[Inter] text-slate-800 leading-relaxed text-[18px]">
+<body class="font-[Inter] leading-relaxed text-[18px]">
 <header class="site-header">
-  <div class="container header-inner max-w-6xl mx-auto px-6 justify-center">
+  <div class="container header-inner max-w-6xl mx-auto px-6">
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      aria-label="Växla tema">
+      🌙
+    </button>
     <h1 class="brand">Varmt välkommen!</h1>
   </div>
 </header>

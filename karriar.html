@@ -7,10 +7,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/theme.js" defer></script>
 </head>
-<body class="font-[Inter] text-slate-800 leading-relaxed text-[18px] subpage">
+<body class="font-[Inter] leading-relaxed text-[18px] subpage">
 <header class="site-header">
   <div class="container header-inner max-w-6xl mx-auto px-4 text-center">
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      aria-label="Växla tema">
+      🌙
+    </button>
     <h1 class="brand">
       <a href="index.html">← Tillbaka</a>
     </h1>
@@ -20,7 +27,7 @@
   <h1 class="text-3xl md:text-4xl font-semibold mb-8 mt-8">
     Karriär
   </h1>
-  <p class="mb-10 max-w-3xl mx-auto text-slate-600">
+  <p class="mb-10 max-w-3xl mx-auto">
     Min resa genom olika roller, ansvar och lärdomar.
   </p>
   <div id="career-target" class="space-y-10 text-left"></div>

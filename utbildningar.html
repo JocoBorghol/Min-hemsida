@@ -4,11 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utbildningar och Kurser - Joco Borghol</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/theme.js" defer></script>
 </head>
-<body class="font-[Inter] text-slate-800 leading-relaxed text-[18px] subpage">
+
+<body class="font-[Inter] leading-relaxed text-[18px] subpage">
+
 <header class="site-header">
   <div class="container header-inner max-w-6xl mx-auto px-4 text-center">
     <h1 class="brand">
@@ -16,16 +21,25 @@
     </h1>
   </div>
 </header>
+
 <main class="container max-w-6xl mx-auto px-4 mb-20 text-center">
-  <h1 class="text-3xl md:text-4xl font-semibold mb-8 mt-8 text-center">
+  <button
+      id="themeToggle"
+      class="theme-toggle"
+      aria-label="Växla tema">
+      🌙
+    </button>
+  <h1 class="text-3xl md:text-4xl font-semibold mb-8 mt-8">
     Utbildningar och Kurser
   </h1>
-  <p class="mb-10 max-w-3xl mx-auto text-slate-600 text-center">
+
+  <p class="mb-10 max-w-3xl mx-auto">
     Här har jag samlat mina utbildningar och kurser.
   </p>
-  <!-- Renderas från JSON -->
-  <div id="education-list" class="space-y-10"></div>
+
+  <div id="education-list" class="space-y-10 text-left"></div>
 </main>
+
 <div class="cta-block">
   <a
     id="cv-download"
@@ -34,6 +48,7 @@
     class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-[#0B132B] to-[#3A506B] text-white font-semibold shadow-lg hover:opacity-90 transition">
     Ladda ner mitt CV
   </a>
+
   <nav class="page-nav">
     <a href="index.html">Start</a>
     <a href="kompetenser.html">Kompetenser</a>
@@ -43,76 +58,63 @@
     <a href="portfolio.html">Portfolio</a>
   </nav>
 </div>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="logos">
-      <div class="logo-box"><img src="images/icalogo.png" alt="ICA logo" /></div>
-      <div class="logo-box"><img src="images/Limhamn_Sjöstad_logotyp.png" alt="Limhams sjostad egna framtagna logo" /></div>
-      <div class="logo-box"><img src="images/oca gruppen.png" alt="ICA Gruppen logo" /></div>
-      <div class="logo-box"><img src="images/chas.jpg" alt="Chas Academy logo" /></div>
-      <a href="https://github.com/JocoBorghol" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="logo-box">
-        <img src="images/github.png" alt="GitHub logo" />
+      <div class="logo-box"><img src="images/icalogo.png" alt="ICA logo"></div>
+      <div class="logo-box"><img src="images/Limhamn_Sjöstad_logotyp.png" alt="Limhamns Sjöstad logo"></div>
+      <div class="logo-box"><img src="images/oca gruppen.png" alt="ICA Gruppen logo"></div>
+      <div class="logo-box"><img src="images/chas.jpg" alt="Chas Academy logo"></div>
+
+      <a href="https://github.com/JocoBorghol"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="GitHub"
+         class="logo-box">
+        <img src="images/github.png" alt="GitHub logo">
       </a>
-      <div class="logo-box"><img src="images/c.png" alt="C#/.NET logo" /></div>
+
+      <div class="logo-box"><img src="images/c.png" alt="C#/.NET logo"></div>
     </div>
+
     <div class="contact">
       <p>© 2025 Joco Borghol</p>
       Tel: <a href="tel:+46704607502">070 460 75 02</a><br>
       LinkedIn:
-      <a href="https://www.linkedin.com/in/joco-borghol-777b59386" target="_blank" rel="noopener noreferrer">Joco Borghol</a><br>
+      <a href="https://www.linkedin.com/in/joco-borghol-777b59386" target="_blank" rel="noopener noreferrer">
+        Joco Borghol
+      </a><br>
       GitHub:
-      <a href="https://github.com/JocoBorghol" target="_blank" rel="noopener noreferrer">github.com/JocoBorghol</a><br>
+      <a href="https://github.com/JocoBorghol" target="_blank" rel="noopener noreferrer">
+        github.com/JocoBorghol
+      </a><br>
       Mail: <a href="mailto:joco.borghol@gmail.com">joco.borghol@gmail.com</a>
     </div>
   </div>
 </footer>
-</body>
-</html>
+
 <script>
-fetch("data/educations.json")
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById("education-list");
+  fetch("data/educations.json")
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("education-list");
+      if (!container) return;
 
-    data.forEach(item => {
-      container.innerHTML += `
-  <section class="col">
-    <h2 class="text-2xl font-semibold mb-1">${item.title}</h2>
-    <p class="text-slate-300 mb-3">
-      ${item.provider} · ${item.year}
-    </p>
-    <p>${item.description}</p>
-  </section>
-`;
-
+      data.forEach(item => {
+        container.innerHTML += `
+          <section class="col">
+            <h2 class="text-2xl font-semibold mb-1">${item.title}</h2>
+            <p class="mb-3 opacity-70">${item.provider} · ${item.year}</p>
+            <p>${item.description}</p>
+          </section>
+        `;
+      });
+    })
+    .catch(err => {
+      console.error("Education JSON error:", err);
     });
-  });
 </script>
-<script>
-fetch("data/experience.json")
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById("experience-list");
 
-    data.forEach(job => {
-      const section = document.createElement("section");
-      section.className = "p-6 rounded-xl bg-white shadow";
-
-      section.innerHTML = `
-        <h2 class="text-xl font-semibold mb-1">
-          ${job.company}
-        </h2>
-        <p class="text-slate-600 mb-2">
-          ${job.role} · ${job.period}
-        </p>
-        <p class="italic mb-3">"${job.summary}"</p>
-        <ul class="list-disc pl-6 space-y-1">
-          ${job.description.map(item => `<li>${item}</li>`).join("")}
-        </ul>
-      `;
-      container.appendChild(section);
-    });
-  });
-</script>
 </body>
 </html>

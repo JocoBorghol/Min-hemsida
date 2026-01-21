@@ -7,16 +7,48 @@
   --blue-700:#3A506B;
   --teal:#5BC0BE;
   --text:#0e1116;
-  --muted:#61748f;
+  --muted:#3a4a63;
   --bg:#f5f7fa;  
 }
 
-/* =========================
-   Grund
-   ========================= */
-body {
-  background: var(--bg);
-  color: var(--text);
+:root[data-theme="dark"] {
+  --bg: var(--blue-900);
+  --text: #c7d4f0;   /* mjuk blågrå för brödtext */
+  --muted: #9fb1d6;  /* sekundär text */
+}
+
+.theme-toggle {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.35);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.28),
+    rgba(255,255,255,0.12)
+  );
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.25);
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
 }
 
 /* =========================
@@ -28,11 +60,13 @@ body {
 }
 
 .header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 14px 0;
 }
+
 
 .brand{
   margin:0;
@@ -90,7 +124,7 @@ body {
   border: 2px solid #2b4c7e;
   border-radius: 14px;
   margin-bottom: 18px;
-  background: #fff;
+  background: var(--bg);
   overflow: hidden;
   box-shadow: 0 6px 14px rgba(0,0,0,0.12);
   transition: transform .2s ease, box-shadow .2s ease;
@@ -107,6 +141,16 @@ body {
   padding: 14px 18px;
   list-style: none;
   background: #f8fbff;
+}
+/* =========================
+   Accordion – introtext dark mode
+   ========================= */
+:root[data-theme="dark"] .summary-intro {
+  color: var(--muted);
+}
+
+.summary-intro {
+  color: #333;
 }
 
 .accordion[open] > summary {
@@ -125,6 +169,19 @@ body {
   display: block;
   margin: 16px auto;
   border-radius: 12px;
+}
+
+/* =========================
+   Accordion – Dark mode
+   ========================= */
+
+:root[data-theme="dark"] .accordion {
+  background: var(--blue-800);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.6);
+}
+:root[data-theme="dark"] .accordion > summary {
+  background: rgba(255,255,255,0.05);
 }
 
 .summary-intro {
@@ -201,7 +258,7 @@ body {
 .site-footer {
   margin-top: 40px;
   background: var(--blue-900);
-  color: #cfe7ff;
+  color: var(--muted);
 }
 
 .footer-inner {
@@ -250,6 +307,7 @@ body {
 
 .contact p {
   margin-bottom: 6px;
+  color: var(--muted);
 }
 
 /* Mobil – mindre loggor */
@@ -398,5 +456,39 @@ a[download]:active {
   gap: 24px;
 }
 
+/* =========================
+   Mobil – override Tailwind spacing
+   ========================= */
+@media (max-width: 640px) {
+  .cta-block {
+    margin-bottom: 8px;
+  }
+}
 
+/* =========================
+   Nav-knappar – Dark mode
+   ========================= */
+:root[data-theme="dark"] .page-nav a {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.14),
+    rgba(255,255,255,0.06)
+  );
+  color: #ffffff;
 
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.25);
+}
+
+body {
+  color: var(--text);
+  background: var(--bg);
+}
+p {
+  color: var(--text);
+}
+
+:root[data-theme="dark"] p {
+  color: var(--muted);
+}
