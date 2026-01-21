@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Utbildningar och Kurser - Joco Borghol</title>
+  <title>Karriär - Joco Borghol</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
@@ -21,15 +21,15 @@
 </header>
 
 <main class="container max-w-6xl mx-auto px-4 mb-20 text-center">
-  <h1 class="text-3xl md:text-4xl font-semibold mb-8 mt-8 text-center">
-    Utbildningar och Kurser
+  <h1 class="text-3xl md:text-4xl font-semibold mb-8 mt-8">
+    Karriär
   </h1>
 
-  <p class="mb-10 max-w-3xl mx-auto text-slate-600 text-center">
-    Här har jag samlat mina utbildningar och kurser.
+  <p class="mb-10 max-w-3xl mx-auto text-slate-600">
+    Min resa genom olika roller, ansvar och lärdomar.
   </p>
-  <!-- Renderas från JSON -->
-  <div id="education-list" class="space-y-10"></div>
+
+  <div id="career-target" class="space-y-10 text-left"></div>
 </main>
 <div class="cta-block">
   <a
@@ -73,55 +73,32 @@
     </div>
   </div>
 </footer>
-</body>
-</html>
-
 <script>
-fetch("data/educations.json")
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById("education-list");
+fetch("index.html")
+  .then(res => res.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
 
-    data.forEach(item => {
-      container.innerHTML += `
-  <section class="col">
-    <h2 class="text-2xl font-semibold mb-1">${item.title}</h2>
-    <p class="text-slate-300 mb-3">
-      ${item.provider} · ${item.year}
-    </p>
-    <p>${item.description}</p>
-  </section>
-`;
+    const careerSource = doc.querySelector("#career-source");
+    const careerTarget = document.getElementById("career-target");
 
+    if (!careerSource || !careerTarget) return;
+
+    // Kopiera karriärinnehållet
+    careerTarget.innerHTML = careerSource.innerHTML;
+
+    // Ta bort originalrubriken (du har redan en egen H1)
+    const originalHeading = careerTarget.querySelector("h2");
+    if (originalHeading) originalHeading.remove();
+
+    // Öppna alla accordion-sektioner
+    careerTarget.querySelectorAll("details").forEach(d => {
+      d.open = true;
     });
   });
 </script>
-<script>
-fetch("data/experience.json")
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById("experience-list");
 
-    data.forEach(job => {
-      const section = document.createElement("section");
-      section.className = "p-6 rounded-xl bg-white shadow";
 
-      section.innerHTML = `
-        <h2 class="text-xl font-semibold mb-1">
-          ${job.company}
-        </h2>
-        <p class="text-slate-600 mb-2">
-          ${job.role} · ${job.period}
-        </p>
-        <p class="italic mb-3">"${job.summary}"</p>
-        <ul class="list-disc pl-6 space-y-1">
-          ${job.description.map(item => `<li>${item}</li>`).join("")}
-        </ul>
-      `;
-
-      container.appendChild(section);
-    });
-  });
-</script>
 </body>
 </html>
