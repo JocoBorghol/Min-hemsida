@@ -16,6 +16,13 @@
 
 <header class="site-header">
   <div class="container header-inner max-w-6xl mx-auto px-4 text-center">
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      aria-label="Växla tema">
+      🌙
+    </button>
+
     <h1 class="brand">
       <a href="index.html">← Tillbaka</a>
     </h1>
@@ -23,12 +30,7 @@
 </header>
 
 <main class="container max-w-6xl mx-auto px-4 mb-20 text-center">
-  <button
-      id="themeToggle"
-      class="theme-toggle"
-      aria-label="Växla tema">
-      🌙
-    </button>
+
   <h1 class="text-3xl md:text-4xl font-semibold mb-8 mt-8">
     Utbildningar och Kurser
   </h1>
@@ -38,6 +40,7 @@
   </p>
 
   <div id="education-list" class="space-y-10 text-left"></div>
+
 </main>
 
 <div class="cta-block">
@@ -111,9 +114,7 @@
         `;
       });
     })
-    .catch(err => {
-      console.error("Education JSON error:", err);
-    });
+    .catch(err => console.error(err));
 </script>
 
 </body>

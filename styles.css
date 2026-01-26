@@ -492,3 +492,88 @@ p {
 :root[data-theme="dark"] p {
   color: var(--muted);
 }
+
+/* =====================================================
+   GALLERI – BILDLAYOUT
+   -----------------------------------------------------
+   - Endast galleri-sidan
+   - Mobil: 1 kolumn
+   - Tablet: 2 kolumner
+   - Laptop och upp: 3 kolumner
+   - Påverkar INTE index
+   ===================================================== */
+
+.gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobil */
+  gap: 1.5rem;
+}
+
+.gallery .gallery-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: block;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .gallery .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop och upp */
+@media (min-width: 1024px) {
+  .gallery .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================
+   Frivilliga bildjusteringar
+   ========================= */
+
+/* Visa hela bilden (t.ex. gruppbild) */
+.gallery .gallery-img.contain {
+  object-fit: contain;
+}
+
+/* Fokusjusteringar vid behov */
+.gallery .gallery-img.focus-top {
+  object-position: center 0%;
+}
+
+.gallery .gallery-img.focus-center {
+  object-position: center 50%;
+}
+
+.gallery .gallery-img.focus-bottom {
+  object-position: center 80%;
+}
+
+/* =========================
+   Galleri – centrera sista raden (2 bilder)
+   ========================= */
+
+@media (min-width: 1024px) {
+  .gallery .gallery-grid {
+    justify-content: center;
+  }
+
+  .gallery .gallery-grid > * {
+    justify-self: center;
+  }
+}
+
+.forward-card p {
+  margin-bottom: 1.25rem;
+}
+
+.forward-card .closing-line {
+  margin-top: 2rem;
+}
+
+
