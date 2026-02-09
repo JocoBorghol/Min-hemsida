@@ -2,7 +2,7 @@
   {
     "title": "Fullstackutvecklare .NET",
     "provider": "Chas Academy",
-    "year": "2025–2027",
+    "year": "2025-2027",
     "description": "En bred utbildning inom systemutveckling med fokus på C#, .NET, databaser, webbutveckling och arkitektur. Kunskaperna används praktiskt genom projekt, grupparbeten och egna applikationer."
   },
   {
@@ -12,9 +12,9 @@
     "description": "Avslutande examensarbete med fokus på att tillämpa systemutveckling i ett verkligt projekt."
   },
   {
-    "title": "LIA – Lärande i arbete",
+    "title": "LIA - Lärande i arbete",
     "provider": "Chas Academy",
-    "year": "2026–2027",
+    "year": "2026-2027",
     "description": "Praktikperiod där teori omsätts i praktiskt arbete i en professionell utvecklingsmiljö."
   },
   {
@@ -42,10 +42,10 @@
     "description": "Fokus på användargränssnitt, WCAG och tillgänglig webbutveckling."
   },
   {
-    "title": "Professional Scrum Product Owner (PSPO I)",
-    "provider": "ProAgile",
-    "year": "Kommande",
-    "description": "Förståelse för produktägarrollen, prioritering och värdeskapande i agila team."
+  "title": "Professional Scrum Product Owner I (PSPO I)",
+  "provider": "ProAgile AB",
+  "year": "2026",
+  "description": "Agilt arbetssätt, Product Ownership och värdebaserad prioritering."
   },
   {
     "title": "Databas och datamodellering",
@@ -60,25 +60,25 @@
     "description": "Grunder i C# och objektorienterad programmering."
   },
   {
-    "title": "FLU – Företagsledarutbildning",
+    "title": "FLU - Företagsledarutbildning",
     "provider": "ICA",
     "year": "2021",
     "description": "Ledarskap, ekonomi och affärsutveckling i butiksmiljö."
   },
   {
-    "title": "ELD – Effektivt lönsamhetsarbete med datorn som verktyg",
+    "title": "ELD - Effektivt lönsamhetsarbete med datorn som verktyg",
     "provider": "ICA",
     "year": "2021",
     "description": "Analys, uppföljning och effektivisering av verksamhet."
   },
   {
-    "title": "BLU – Butiksledarutbildning",
+    "title": "BLU - Butiksledarutbildning",
     "provider": "ICA",
     "year": "2010",
     "description": "Grundläggande ledarskap och drift av butik."
   },
   {
-    "title": "AOB – Automatisk Order i Butik",
+    "title": "AOB - Automatisk Order i Butik",
     "provider": "ICA",
     "year": "2017",
     "description": "Effektivisering av varuflöden och orderprocesser."
@@ -90,7 +90,7 @@
     "description": "Livsmedelssäkerhet och egenkontroll."
   },
   {
-    "title": "Vizuera – Försäljning och lönsamhet",
+    "title": "Vizuera - Försäljning och lönsamhet",
     "provider": "ICA",
     "year": "2013",
     "description": "Försäljningsanalys och lönsamhetsstyrning."

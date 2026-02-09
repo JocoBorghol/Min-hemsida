@@ -198,22 +198,65 @@
 .col,
 .col-edu {
   border-radius: 16px;
-  padding: 20px;
+  padding: 24px 28px;
   background: linear-gradient(180deg, var(--blue-900), var(--blue-700));
   color: #fff;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
+/* Centrera innehåll i kompetenskolumner */
+.col {
+  text-align: center;
+}
+
+.col ul {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+
+.col-edu {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.edu-inner {
+  max-width: 900px;   /* samma visuella bredd som col-edu */
+  margin: 0 auto;
+}
+
+
+
 .col ul,
 .col-edu ul {
-  padding-left: 22px;
+  padding-left: 0;
 }
 
 .col li,
 .col-edu li {
-  margin: 8px 0;
-  line-height: 1.6;
+  margin: 4px 0;
+  line-height: 1.45;
 }
+
+
+.col-edu ul {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-edu .skill-group-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.col-edu .skill-group-title:first-of-type {
+  margin-top: 0.8rem;
+}
+
 
 /* =========================
    GALLERI – FIXAT & JÄMNT
@@ -553,18 +596,17 @@ p {
 .gallery .gallery-img.focus-bottom {
   object-position: center 80%;
 }
-
 /* =========================
-   Galleri – centrera sista raden (2 bilder)
+   Galleri – Certifiering
    ========================= */
 
 @media (min-width: 1024px) {
-  .gallery .gallery-grid {
-    justify-content: center;
-  }
-
-  .gallery .gallery-grid > * {
-    justify-self: center;
+  .gallery .gallery-img.gallery-cert {
+    grid-column: 1 / -1;      /* tar hela raden (3 kolumner) */
+    aspect-ratio: auto;       /* släpper 4/5-låset */
+    object-fit: contain;      /* visa hela certet */
+    background: #ffffff;
+    padding: 16px;
   }
 }
 
@@ -575,5 +617,62 @@ p {
 .forward-card .closing-line {
   margin-top: 2rem;
 }
+
+/* Kolumnrubrik */
+.col h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+
+.skill-group-title {
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
+
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: #e8f0ff;
+
+  text-align: center;
+
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.col ul {
+  margin-bottom: 1.75rem;
+}
+
+.col ul:last-child {
+  margin-bottom: 0;
+}
+
+.col li {
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.col-solid .skill-group-title {
+  margin-top: 2.5rem;
+}
+
+.col-outline li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
 
 
